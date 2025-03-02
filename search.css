@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6600;
+    padding: 15px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#searchInput {
+    padding: 8px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#foodList {
+    padding: 20px;
+}
+
+.food-item {
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}

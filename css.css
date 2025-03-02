@@ -1,0 +1,29 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+
+}
+h1{
+    color:white;
+}
+.hx-code
+{
+    color:white;
+    margin:20px;
+
+}
+.bn
+{
+    padding: 10px;;
+    color: white;
+    cursor: pointer;
+    background:linear-gradient(yellow,rgba(255, 255, 0, 0.548));
+}
+.bn:hover{
+    background-color: grey;
+}

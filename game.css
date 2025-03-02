@@ -1,0 +1,36 @@
+*
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+}
+main{
+    max-width: 500px;
+    max-width: 400px;
+    background-color: black;
+}
+#xp,#health,#gold
+{
+    color: white;
+}
+.bnn
+{
+    color:white;
+    padding:20px;
+}
+.text
+{
+    color:white;
+
+}
+.xp,.health,.gold
+{
+    color: white;
+}
+button{
+    padding:10px;
+    cursor: pointer;
+}

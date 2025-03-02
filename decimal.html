@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal ↔ Binary Converter</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input { padding: 10px; margin: 10px; font-size: 16px; }
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>Decimal ↔ Binary Converter</h2>
+    
+    <label>Decimal:</label>
+    <input type="number" id="decimal" placeholder="Enter decimal" oninput="convertToBinary()">
+    
+    <br>
+
+    <label>Binary:</label>
+    <input type="text" id="binary" placeholder="Enter binary" oninput="convertToDecimal()">
+    
+    <br>
+
+    <p id="error" class="error"></p>
+
+    <script>
+        function convertToBinary() {
+            let decimalInput = document.getElementById("decimal").value;
+            let binaryField = document.getElementById("binary");
+            
+            if (decimalInput !== "") {
+                binaryField.value = parseInt(decimalInput, 10).toString(2);
+            } else {
+                binaryField.value = "";
+            }
+
+            document.getElementById("error").textContent = "";
+        }
+
+        function convertToDecimal() {
+            let binaryInput = document.getElementById("binary").value;
+            let decimalField = document.getElementById("decimal");
+            let errorMessage = document.getElementById("error");
+
+            if (/^[01]+$/.test(binaryInput) || binaryInput === "") {
+                decimalField.value = binaryInput ? parseInt(binaryInput, 2) : "";
+                errorMessage.textContent = "";
+            } else {
+                errorMessage.textContent = "Error: Binary input must contain only 0 and 1!";
+            }
+        }
+    </script>
+
+</body>
+</html>

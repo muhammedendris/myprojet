@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2, h3 {
+    color: #ff6600;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label, select, input, button {
+    display: block;
+    margin: 10px 0;
+}
+
+#orderList {
+    list-style: none;
+    padding: 0;
+}
+
+.order-item {
+    background: #f4f4f4;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cc5500;
+}

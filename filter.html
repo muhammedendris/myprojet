@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input, select {
+            margin: 10px;
+            padding: 8px;
+            width: 80%;
+        }
+        .results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="search" placeholder="Search by name...">
+        <select id="category">
+            <option value="All">All</option>
+            <option value="Coffee">Coffee</option>
+            <option value="Tea">Tea</option>
+            <option value="Bakery">Bakery</option>
+        </select>
+        <div id="results" class="results"></div>
+    </div>
+    <script>
+        const items = [
+            { name: "Espresso", category: "Coffee", price: "$3", image: "https://example.com/images/espresso.jpg" },
+            { name: "Cappuccino", category: "Coffee", price: "$4", image: "https://example.com/images/cappuccino.jpg" },
+            { name: "Green Tea", category: "Tea", price: "$2.5", image: "https://example.com/images/green-tea.jpg" },
+            { name: "Black Tea", category: "Tea", price: "$2", image: "https://example.com/images/black-tea.jpg" },
+            { name: "Muffin", category: "Bakery", price: "$3.5", image: "https://example.com/images/muffin.jpg" },
+            { name: "Croissant", category: "Bakery", price: "$4", image: "https://example.com/images/croissant.jpg" }
+        ];
+
+        function searchAndFilter() {
+            const searchInput = document.getElementById("search").value.toLowerCase();
+            const categoryInput = document.getElementById("category").value;
+            const resultContainer = document.getElementById("results");
+            
+            const filteredItems = items.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(searchInput);
+                const matchesCategory = categoryInput === "All" || item.category === categoryInput;
+                return matchesSearch && matchesCategory;
+            });
+            
+            resultContainer.innerHTML = filteredItems.map(function(item){
+return
+            `
+                <div class="item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p>Category: ${item.category}</p>
+                    <p>Price: ${item.price}</p>
+                </div>
+            `}).join("");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("search").addEventListener("input", searchAndFilter);
+            document.getElementById("category").addEventListener("change", searchAndFilter);
+        });
+    </script>
+</body>
+</html>

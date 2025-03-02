@@ -1,0 +1,34 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 375px;
+    height: 500px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: auto;
+}
+.seacr-bar{
+    width: 100%;
+    margin:10px;
+}
+.seacr-bar input{
+width: 80%;
+height: 40px;
+border-radius: 10px;
+}
+.seacr-bar #s
+{
+    width: 10%;
+    height: 40px;
+    font-size: 30px;
+}
+.product img{
+    width: 70px;
+    height: 70px;
+}

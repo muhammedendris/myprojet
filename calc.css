@@ -1,0 +1,51 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    font-size: 50px;
+}
+.calc
+{
+    width:400px;
+    height: 300px;
+    border: 2px green solid;
+    margin: auto;
+}
+
+button
+{
+    padding:15px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.display
+{
+height: 50px;
+max-width: 100px;
+}
+td{
+    border: 2px solid black;
+}
+tr,td,table{
+    border-collapse: collapse;
+
+}
+#equal
+{
+    padding:50px 30px;
+}
+.del
+{
+    padding-right: 20px;
+}
+.del,.minus,.plus
+{
+    padding: 10px;
+}

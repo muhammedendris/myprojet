@@ -1,0 +1,37 @@
+*,::after,::before{
+    margin: 0;
+padding:0;
+box-sizing: border-box;
+}
+.container
+{
+    background-color: white;
+    width:400px;
+    height: 400px;
+    margin-top: 100px;
+    text-align: center;
+    border: 2px white solid;
+    border-radius: 15px;
+    
+}
+body{
+    background-color: rgb(22, 12, 12);
+    display: flex;
+    justify-content: center;
+}
+.title
+{
+    font-size: 20px;
+    color: blueviolet;
+}
+#wana
+{
+    padding :20px;
+}
+.list
+{
+    list-style-type: none;
+    padding: 20px;
+    font-size: 15px;
+    border-bottom: 2px solid black;
+}

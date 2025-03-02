@@ -1,0 +1,56 @@
+
+.modal
+{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    visibility: visible;
+    z-index: 10;
+}
+body{
+    background:url(man-593333_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.small
+{
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    position: fixed;
+    visibility: hidden;
+    z-index: -10;
+    
+}
+.open
+{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(0, 26, 255);
+    border-radius: 15px;
+margin-left: 150px;
+margin-top: 150px;
+    cursor: pointer;
+}
+.open:hover
+{
+    background-color: black;
+    color: aliceblue;
+}
+h3{
+    text-align: center;
+    font-size: 30px;
+}
+.close
+{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    cursor: pointer;
+  margin-left: 385px;
+  margin-bottom: 250px;
+}

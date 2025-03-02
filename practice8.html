@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >const products = [
+    { name: "Laptop", category: "Electronics", price: 1000 },
+    { name: "Shirt", category: "Clothing", price: 30 },
+    { name: "Phone", category: "Electronics", price: 500 },
+    { name: "Shoes", category: "Clothing", price: 80 }
+];
+
+// Step 1: Filter only Electronics
+const electronics = products.filter(product => product.category === "Electronics");
+
+// Step 2: Convert price to a formatted string
+const formattedProducts = electronics.map(product => ({
+    name: product.name,
+    price: `$${product.price}`
+}));
+
+// Step 3: Display in the console (or in HTML)
+formattedProducts.forEach(product => {
+    console.log(`Product: ${product.name}, Price: ${product.price}`);
+});
+
+/* Output:
+Product: Laptop, Price: $1000
+Product: Phone, Price: $500
+*/
+const product = [
+    { name: "Laptop", category: "Electronics", price: 1000 },
+    { name: "Shirt", category: "Clothing", price: 30 },
+    { name: "Phone", category: "Electronics", price: 500 },
+    { name: "Shoes", category: "Clothing", price: 80 }
+];
+
+// Step 1: Filter only Electronics
+const electronic= products.filter(function(product) {
+    return product.category === "Electronics";
+});
+
+// Step 2: Convert price to a formatted string
+const formattedProduct = electronics.map(function(product) {
+    return {
+        name: product.name,
+        price: "$" + product.price
+    };
+});
+
+// Step 3: Display in the console (or in HTML)
+formattedProducts.forEach(function(product) {
+    console.log("Product: " + product.name + ", Price: " + product.price);
+});
+
+/* Output:
+Product: Laptop, Price: $1000
+Product: Phone, Price: $500
+*/
+
+</script>
+</body>
+</html>
